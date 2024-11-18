@@ -1,6 +1,10 @@
 # NuPhy Air60 V2 for one-hansed input
 
-This is a custom layout for the 64-key NuPhy Air60 V2 keyboard.
+![NuPhy Air60 V2](https://bit.ly/48qfjbS)
+
+This is a custom layout for the 64-key NuPhy Air60 V2 keyboard. The
+firmware is based on the [work published by adi4086 user on
+GitHub](https://github.com/adi4086/qmk_firmware/tree/my-nuphy-keyboards).
 
 This layout optimizes the work for a one-handed user: Space+letter
 produces a letter from the opposite side of the keyboard, mirrored
@@ -41,31 +45,33 @@ VIA support is removed.
   described above.
 
 
-## About the keyboard:
+# Installing the firmawe
 
-![NuPhy Air60 V2](https://bit.ly/48qfjbS)
+```
+# first, set up QMK as described on the QMK website.
+# Then, clone our firmware in a separate directory
 
-* Keyboard Maintainer: [nuphy](https://github.com/nuphy-src)
-* Hardware Supported: NuPhy Air60 V2 PCB
+git clone --recursive -b onehanded_nuphy_air60_v2 https://github.com/clackups/qmk_firmware.git onehanded_nuphy
+cd onehanded_nuphy
+qmk -v compile  -kb nuphy/air60_v2/ansi -km clackups_mirrored
 
-Compile the firmware:
+# if compiler finished successfully, power-on the keyboard while holding the Esc key,
+# then proceed to flashing. Flashing takes about 10 minutes.
+qmk -v flash  -kb nuphy/air60_v2/ansi -km clackups_mirrored
+```
 
-    make nuphy/air60_v2/ansi:clackups_mirrored
-
-Flashing example for this keyboard:
-
-    make nuphy/air60_v2/ansi:clackups_mirrored:flash
-
-After flashing the new firmware, the 2.4Ghz dongle needs to be
-repaired: press and hold Fn+R for a few seconds, until the green light
+After flashing the new firmware, you may need to re-pair the 2.4Ghz
+dongle: press and hold Fn+R for a few seconds, until the green light
 on the left side blinks rapidly, and then insert the dongle into your
 computer. Also, if the keyboard had previously BlueTooth associations,
-it has to be re-paired as a new BlueTooth device.
+it may need to be re-paired as a new BlueTooth device.
 
-See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) and the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information. Brand new to QMK? Start with our [Complete Newbs Guide](https://docs.qmk.fm/#/newbs).
 
-## Bootloader
+# Copyright and license
 
-Enter the bootloader in one way:
+This work is published and distributed under the [GNU GPL](LICENSE)
+terms and conditions.
 
-* **Bootmagic reset**: Hold down the key at (0,0) in the matrix (usually the top left key or Escape) and plug in the keyboard
+clackups@gmail.com
+
+Fediverse: [@clackups@social.noleron.com](https://social.noleron.com/@clackups)
