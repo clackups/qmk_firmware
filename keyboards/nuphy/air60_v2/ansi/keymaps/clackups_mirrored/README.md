@@ -1,4 +1,4 @@
-# NuPhy Air60 V2 for one-hansed input
+# NuPhy Air60 V2 for one-handed input
 
 ![NuPhy Air60 V2](https://bit.ly/48qfjbS)
 
