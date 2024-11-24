@@ -32,9 +32,9 @@ VIA support is removed.
 
 ## Right-handed input:
 
-* If you hold down T or U, right Shift, arrows and Del turn into the
-  standard 6-key block (ins-del, home-end, PgUp-PgDn). Also, Enter is
-  equivalent to Tab key.
+* If you hold down T or U or Backslash, then right Shift, arrows and
+  Del turn into the standard 6-key block (ins-del, home-end,
+  PgUp-PgDn). Also, Enter is equivalent to Tab key.
 
 * Space+Backspace is equivalent to Esc key.
 
